@@ -4,7 +4,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 // Define the metadata for the layout
 export const metadata = {
-  title: 'DailyReadings.today',
+  title: 'Daily Mass Readings',
   description: 'Daily Mass Readings',
   generator: 'Next.js',
   manifest: '/manifest.json',
@@ -17,7 +17,7 @@ export const metadata = {
   ],
   icons: [
     { rel: 'apple-touch-icon', url: '/icons/apple-touch-icon.png' },
-    { rel: 'icon', url: '/icons/favicon-96x96.png' },
+    { rel: 'icon', url: '/icons/favicon.svg' },
     { rel: 'shortcut-icon', url: '/icons/favicon.ico' },
   ],
 };
