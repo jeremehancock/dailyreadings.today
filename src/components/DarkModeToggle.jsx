@@ -9,7 +9,7 @@ const DarkModeToggle = () => {
       bottom: '10px',
       left: 'unset',
       right: '15px',
-      time: '0.5s',
+      time: '0s',
       label: '🌓',
       autoMatchOsTheme: true,
     });
@@ -21,12 +21,12 @@ const DarkModeToggle = () => {
       body.darkmode--activated {
         background-color: black !important;
       }
-      body.darkmode--activated .copyright-dark-mode {
-        color: black !important;
+      body.darkmode--activated .response-dark-mode {
+        color: darkcyan !important;
       }
-      // .darkmode-toggle, .darkmode-layer, .darkmode-layer--button {
-      //   bottom: unset;
-      // }
+      .darkmode-toggle, .darkmode-layer, .darkmode-layer--button {
+        bottom: unset;
+      }
     `;
     document.head.appendChild(style);
 

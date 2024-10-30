@@ -38,18 +38,21 @@ const Readings = () => {
   };
 
   const formatResponse = (string) => {
-    return string.replace(/<i>/g, `<div class="${styles.responseStyle}"><i>`);
+    return string.replace(
+      /<i>/g,
+      `<div class="${styles.responseStyle} response-dark-mode"><i>`,
+    );
   };
 
   const formatAlleluia = (string) => {
     return string
       .replace(
         /Alleluia, alleluia!/g,
-        `<div class="${styles.responseStyle}" style="margin-bottom:0.8em;">Alleluia, alleluia!`,
+        `<div class="${styles.responseStyle} response-dark-mode" style="margin-bottom:0.8em;">Alleluia, alleluia!`,
       )
       .replace(
         /Alleluia!/g,
-        `<div class="${styles.responseStyle}" style="margin-top:0.8em;">Alleluia!`,
+        `<div class="${styles.responseStyle} response-dark-mode" style="margin-top:0.8em;">Alleluia!`,
       );
   };
 
