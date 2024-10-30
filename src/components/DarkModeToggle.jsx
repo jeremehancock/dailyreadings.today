@@ -24,9 +24,6 @@ const DarkModeToggle = () => {
       body.darkmode--activated .response-dark-mode {
         color: darkcyan !important;
       }
-      .darkmode-toggle, .darkmode-layer, .darkmode-layer--button {
-        bottom: unset;
-      }
     `;
     document.head.appendChild(style);
 
