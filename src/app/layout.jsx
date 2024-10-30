@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
           href="/apple-touch-icon.png"
         />
         <meta name="apple-mobile-web-app-title" content="Daily Readings" />
-        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
