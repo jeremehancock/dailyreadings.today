@@ -6,7 +6,7 @@ import Darkmode from 'darkmode-js';
 const DarkModeToggle = () => {
   useEffect(() => {
     const darkmode = new Darkmode({
-      top: '10px',
+      bottom: '10px',
       left: 'unset',
       right: '15px',
       time: '0.5s',
@@ -24,9 +24,9 @@ const DarkModeToggle = () => {
       body.darkmode--activated .copyright-dark-mode {
         color: black !important;
       }
-      .darkmode-toggle, .darkmode-layer, .darkmode-layer--button {
-        bottom: unset;
-      }
+      // .darkmode-toggle, .darkmode-layer, .darkmode-layer--button {
+      //   bottom: unset;
+      // }
     `;
     document.head.appendChild(style);
 
