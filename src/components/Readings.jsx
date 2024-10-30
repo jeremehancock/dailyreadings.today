@@ -47,7 +47,7 @@ const Readings = () => {
   const formatCopyright = (string) => {
     return string.replace(
       /www.universalis.com/g,
-      '<a href="https://www.universalis.com" target="_blank">www.universalis.com</a>',
+      `<a href="https://www.universalis.com" target="_blank" class="${styles.copyrightColor} copyright-dark-mode">www.universalis.com</a>`,
     );
   };
 
