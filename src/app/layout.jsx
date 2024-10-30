@@ -5,6 +5,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
 import Head from 'next/head';
 
+export const metadata = {
+  title: 'DailyReadings.today',
+  description: 'Daily Mass Readings',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
