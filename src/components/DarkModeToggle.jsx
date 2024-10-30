@@ -9,7 +9,7 @@ const DarkModeToggle = () => {
       top: '10px',
       left: 'unset',
       right: '10px',
-      time: '0s',
+      time: '0.5s',
       label: '🌓',
       autoMatchOsTheme: true,
     });
@@ -18,12 +18,6 @@ const DarkModeToggle = () => {
     // Add CSS override to ignore dark mode for certain elements
     const style = document.createElement('style');
     style.innerHTML = `
-      body.darkmode--activated {
-        background-color: black !important;
-      }
-      body.darkmode--activated .response-dark-mode {
-        color: darkcyan !important;
-      }
       body.darkmode--activated .copyright-dark-mode {
         color: black !important;
       }

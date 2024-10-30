@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { fetchReadings } from '@/lib/fetchReadings';
 import { Box, Stack, Typography } from '@mui/material';
-import styles from '@/components/ResponseColor.module.css';
+import styles from '@/components/ResponseStyles.module.css';
 
 const Readings = () => {
   const [data, setData] = useState(null);
@@ -38,21 +38,18 @@ const Readings = () => {
   };
 
   const formatResponse = (string) => {
-    return string.replace(
-      /<i>/g,
-      `<div class="${styles.responseColor} response-dark-mode"><i>`,
-    );
+    return string.replace(/<i>/g, `<div class="${styles.responseStyle}"><i>`);
   };
 
   const formatAlleluia = (string) => {
     return string
       .replace(
         /Alleluia, alleluia!/g,
-        `<div class="${styles.responseColor} response-dark-mode" style="margin-bottom:0.8em;">Alleluia, alleluia!`,
+        `<div class="${styles.responseStyle}" style="margin-bottom:0.8em;">Alleluia, alleluia!`,
       )
       .replace(
         /Alleluia!/g,
-        `<div class="${styles.responseColor} response-dark-mode" style="margin-top:0.8em;">Alleluia!`,
+        `<div class="${styles.responseStyle}" style="margin-top:0.8em;">Alleluia!`,
       );
   };
 
@@ -71,52 +68,66 @@ const Readings = () => {
       <Typography sx={{ typography: { xs: 'h4', md: 'h2' }, mb: 5 }}>
         {data ? formatText(data.day) : ''}
       </Typography>
-      <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
-        First Reading
-      </Typography>
-      <Typography sx={{ typography: { xs: 'h4', md: 'h4' }, mb: 3 }}>
-        {data ? formatText(data.Mass_R1.source) : ''}
-      </Typography>
+      <Stack direction="row" justifyContent="space-between" alignItems="center">
+        <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          First Reading
+        </Typography>
+        <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          {data ? formatText(data.Mass_R1.source) : ''}
+        </Typography>
+      </Stack>
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
         {data ? formatText(data.Mass_R1.text) : ''}
       </Typography>
-      <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
-        Responsorial Psalm
-      </Typography>
-      <Typography sx={{ typography: { xs: 'h4', md: 'h4' }, mb: 3 }}>
-        {data ? formatText(data.Mass_Ps.source) : ''}
-      </Typography>
+      <Stack direction="row" justifyContent="space-between" alignItems="center">
+        <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          Responsorial Psalm
+        </Typography>
+        <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          {data ? formatText(data.Mass_Ps.source) : ''}
+        </Typography>
+      </Stack>
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
         {data ? formatText(formatResponse(data.Mass_Ps.text)) : ''}
       </Typography>
       {data.Mass_R2 && (
         <Box>
-          <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
-            Second Reading
-          </Typography>
-          <Typography sx={{ typography: { xs: 'h4', md: 'h4' }, mb: 3 }}>
-            {data ? formatText(data.Mass_R2.source) : ''}
-          </Typography>
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+              Second Reading
+            </Typography>
+            <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+              {data ? formatText(data.Mass_R2.source) : ''}
+            </Typography>
+          </Stack>
           <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 3 }}>
             {data ? formatText(data.Mass_R2.text) : ''}
           </Typography>
         </Box>
       )}
-      <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
-        Alleluia
-      </Typography>
-      <Typography sx={{ typography: { xs: 'h4', md: 'h4' }, mb: 3 }}>
-        {data ? formatText(data.Mass_GA.source) : ''}
-      </Typography>
+      <Stack direction="row" justifyContent="space-between" alignItems="center">
+        <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          Alleluia
+        </Typography>
+        <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          {data ? formatText(data.Mass_GA.source) : ''}
+        </Typography>
+      </Stack>
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
         {data ? formatText(formatAlleluia(data.Mass_GA.text)) : ''}
       </Typography>
-      <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
-        Gospel
-      </Typography>
-      <Typography sx={{ typography: { xs: 'h4', md: 'h4' }, mb: 3 }}>
-        {data ? formatText(data.Mass_G.source) : ''}
-      </Typography>
+      <Stack direction="row" justifyContent="space-between" alignItems="center">
+        <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          Gospel
+        </Typography>
+        <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          {data ? formatText(data.Mass_G.source) : ''}
+        </Typography>
+      </Stack>
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 10 }}>
         {data ? formatText(data.Mass_G.text) : ''}
       </Typography>
