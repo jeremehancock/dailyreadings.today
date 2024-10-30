@@ -1,6 +1,6 @@
 {
   "name": "DailyReadings.today",
-  "short_name": "dailyreadings",
+  "short_name": "Daily Readings",
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "display": "standalone",
