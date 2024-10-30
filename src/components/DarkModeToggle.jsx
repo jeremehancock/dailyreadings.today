@@ -8,7 +8,7 @@ const DarkModeToggle = () => {
     const darkmode = new Darkmode({
       top: '10px',
       left: 'unset',
-      right: '10px',
+      right: '15px',
       time: '0.5s',
       label: '🌓',
       autoMatchOsTheme: true,

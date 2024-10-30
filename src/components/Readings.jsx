@@ -68,7 +68,11 @@ const Readings = () => {
       <Typography sx={{ typography: { xs: 'h4', md: 'h2' }, mb: 5 }}>
         {data ? formatText(data.day) : ''}
       </Typography>
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        justifyContent="space-between"
+        alignItems={{ xs: 'left', md: 'center' }}
+      >
         <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
           First Reading
         </Typography>
@@ -79,7 +83,11 @@ const Readings = () => {
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
         {data ? formatText(data.Mass_R1.text) : ''}
       </Typography>
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        justifyContent="space-between"
+        alignItems={{ xs: 'left', md: 'center' }}
+      >
         <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
           Responsorial Psalm
         </Typography>
@@ -93,9 +101,9 @@ const Readings = () => {
       {data.Mass_R2 && (
         <Box>
           <Stack
-            direction="row"
+            direction={{ xs: 'column', md: 'row' }}
             justifyContent="space-between"
-            alignItems="center"
+            alignItems={{ xs: 'left', md: 'center' }}
           >
             <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
               Second Reading
@@ -109,7 +117,11 @@ const Readings = () => {
           </Typography>
         </Box>
       )}
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        justifyContent="space-between"
+        alignItems={{ xs: 'left', md: 'center' }}
+      >
         <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
           Alleluia
         </Typography>
@@ -120,7 +132,11 @@ const Readings = () => {
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
         {data ? formatText(formatAlleluia(data.Mass_GA.text)) : ''}
       </Typography>
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        justifyContent="space-between"
+        alignItems={{ xs: 'left', md: 'center' }}
+      >
         <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
           Gospel
         </Typography>
