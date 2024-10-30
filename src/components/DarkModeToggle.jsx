@@ -18,6 +18,9 @@ const DarkModeToggle = () => {
     // Add CSS override to ignore dark mode for certain elements
     const style = document.createElement('style');
     style.innerHTML = `
+      body.darkmode--activated {
+        background-color: black !important;
+      }
       body.darkmode--activated .copyright-dark-mode {
         color: black !important;
       }
