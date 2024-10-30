@@ -147,7 +147,7 @@ const Readings = () => {
       <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 10 }}>
         {data ? formatText(data.Mass_G.text) : ''}
       </Typography>
-      <Typography variant="label" fontSize={11}>
+      <Typography variant="label" fontSize={11} sx={{ mb: 5 }}>
         {data ? formatText(formatCopyright(data.copyright.text)) : ''}
       </Typography>
     </Stack>
