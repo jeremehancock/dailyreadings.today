@@ -44,6 +44,13 @@ const Readings = () => {
     );
   };
 
+  const formatCopyright = (string) => {
+    return string.replace(
+      /www.universalis.com/g,
+      '<a href="https://www.universalis.com" target="_blank">www.universalis.com</a>',
+    );
+  };
+
   return data ? (
     <Stack>
       <Typography sx={{ typography: { xs: 'h3', md: 'h1' }, mb: 5 }}>
@@ -102,7 +109,7 @@ const Readings = () => {
         {data ? formatText(data.Mass_G.text) : ''}
       </Typography>
       <Typography variant="label" fontSize={11}>
-        {data ? formatText(data.copyright.text) : ''}
+        {data ? formatText(formatCopyright(data.copyright.text)) : ''}
       </Typography>
     </Stack>
   ) : (

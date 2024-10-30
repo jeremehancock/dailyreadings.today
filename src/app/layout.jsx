@@ -6,7 +6,7 @@ import theme from '@/theme';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" title="Daily Mass Readings">
+    <html lang="en">
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
