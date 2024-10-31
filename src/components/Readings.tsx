@@ -39,11 +39,15 @@ const Readings = () => {
       .replace(/\s*style=""/gi, '')
       .replace(/(style="[^"]*)\bfont-size\s*:\s*[^;]+;?\s*/gi, '$1')
       .replace(/style="\s*"/gi, 'style=""')
+      .replace(/(style="[^"]*)\btext-align\s*:\s*[^;]+;?\s*/gi, '$1')
+      .replace(/style="\s*"/gi, 'style=""')
       .replace(/\s*style=""/gi, '')
       .replace(/(style="[^"]*)\bcolor\s*:\s*[^;]+;?\s*/gi, '$1')
       .replace(/style="\s*"/gi, 'style=""')
       .replace(/\s*style=""/gi, '');
-    return <span dangerouslySetInnerHTML={{ __html: string }} />;
+    return (
+      <Box component="span" dangerouslySetInnerHTML={{ __html: string }} />
+    );
   };
 
   const formatResponse = (string: string) => {
