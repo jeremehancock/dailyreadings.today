@@ -1,10 +1,7 @@
-import { Inter } from 'next/font/google';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from '@/theme';
 import { ReactNode } from 'react'; // Import ReactNode for typing
-
-const inter = Inter({ subsets: ['latin'] });
 
 // Define the metadata for the layout
 export const metadata = {
@@ -44,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
         <meta name="apple-mobile-web-app-title" content="Daily Readings" />
       </head>
-      <body className={inter.className}>
+      <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           {children}
