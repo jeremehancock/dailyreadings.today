@@ -79,10 +79,10 @@ const Readings = () => {
   return data ? (
     <>
       <Stack>
-        <Typography sx={{ typography: { xs: 'h3', md: 'h1' }, mb: 5 }}>
+        <Typography mb={5} sx={{ typography: { xs: 'h3', md: 'h1' } }}>
           {formatText(data.date)}
         </Typography>
-        <Typography sx={{ typography: { xs: 'h4', md: 'h2' }, mb: 5 }}>
+        <Typography variant="h4" mb={5}>
           {formatText(data.day)}
         </Typography>
         <Stack
@@ -90,14 +90,14 @@ const Readings = () => {
           justifyContent="space-between"
           alignItems={{ xs: 'left', md: 'center' }}
         >
-          <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          <Typography variant="h4" mb={5}>
             First Reading
           </Typography>
-          <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          <Typography variant="h5" mb={3}>
             {formatText(data.Mass_R1.source)}
           </Typography>
         </Stack>
-        <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
+        <Typography variant="h6" mb={5}>
           {formatText(data.Mass_R1.text)}
         </Typography>
         <Stack
@@ -105,14 +105,14 @@ const Readings = () => {
           justifyContent="space-between"
           alignItems={{ xs: 'left', md: 'center' }}
         >
-          <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          <Typography variant="h4" mb={5}>
             Responsorial Psalm
           </Typography>
-          <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          <Typography variant="h5" mb={3}>
             {formatText(data.Mass_Ps.source)}
           </Typography>
         </Stack>
-        <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
+        <Typography variant="h6" mb={5}>
           {formatText(formatResponse(data.Mass_Ps.text))}
         </Typography>
         {data.Mass_R2 && (
@@ -122,14 +122,14 @@ const Readings = () => {
               justifyContent="space-between"
               alignItems={{ xs: 'left', md: 'center' }}
             >
-              <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+              <Typography variant="h4" mb={5}>
                 Second Reading
               </Typography>
-              <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+              <Typography variant="h5" mb={3}>
                 {formatText(data.Mass_R2.source)}
               </Typography>
             </Stack>
-            <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 3 }}>
+            <Typography variant="h6" mb={5}>
               {formatText(data.Mass_R2.text)}
             </Typography>
           </Box>
@@ -139,14 +139,14 @@ const Readings = () => {
           justifyContent="space-between"
           alignItems={{ xs: 'left', md: 'center' }}
         >
-          <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          <Typography variant="h4" mb={5}>
             Alleluia
           </Typography>
-          <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          <Typography variant="h5" mb={3}>
             {formatText(data.Mass_GA.source)}
           </Typography>
         </Stack>
-        <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
+        <Typography variant="h6" mb={5}>
           {formatText(formatAlleluia(data.Mass_GA.text))}
         </Typography>
         <Stack
@@ -154,19 +154,19 @@ const Readings = () => {
           justifyContent="space-between"
           alignItems={{ xs: 'left', md: 'center' }}
         >
-          <Typography sx={{ typography: { xs: 'h3', md: 'h2' }, mb: 5 }}>
+          <Typography variant="h4" mb={5}>
             Gospel
           </Typography>
-          <Typography sx={{ typography: { xs: 'h6', md: 'h6' }, mb: 3 }}>
+          <Typography variant="h5" mb={3}>
             {formatText(data.Mass_G.source)}
           </Typography>
         </Stack>
-        <Typography sx={{ typography: { xs: 'h5', md: 'h5' }, mb: 5 }}>
+        <Typography variant="h6" mb={5}>
           {formatText(data.Mass_G.text)}
         </Typography>
       </Stack>
       <CopyRight open={false} title="Licenses">
-        <Typography sx={{ mb: 2 }}>
+        <Typography mb={2}>
           {formatText(formatCopyright(data.copyright.text))}
         </Typography>
       </CopyRight>
