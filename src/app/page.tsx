@@ -3,8 +3,6 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Readings from '@/components/Readings';
 
-import DarkModeToggle from '@/components/DarkModeToggle';
-
 export default function Home() {
   return (
     <Container>
@@ -18,7 +16,6 @@ export default function Home() {
         }}
       >
         <Readings />
-        <DarkModeToggle />
       </Box>
     </Container>
   );

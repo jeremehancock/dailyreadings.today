@@ -1,6 +1,13 @@
 import { Inter } from 'next/font/google';
+import DarkModeToggle from '@/components/DarkModeToggle';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import theme from '@/theme';
 
 const inter = Inter({ subsets: ['latin'] });
+
+interface RootLayoutProps {
+  children: ReactNode;
+}
 
 // Define the metadata for the layout
 export const metadata = {
@@ -23,7 +30,7 @@ export const metadata = {
 };
 
 // Root layout component
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
@@ -35,7 +42,13 @@ export default function RootLayout({ children }) {
         />
         <meta name="apple-mobile-web-app-title" content="Daily Readings" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+          <DarkModeToggle />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
