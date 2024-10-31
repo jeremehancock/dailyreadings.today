@@ -5,10 +5,6 @@ import theme from '@/theme';
 
 const inter = Inter({ subsets: ['latin'] });
 
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
 // Define the metadata for the layout
 export const metadata = {
   title: 'Daily Mass Readings',
