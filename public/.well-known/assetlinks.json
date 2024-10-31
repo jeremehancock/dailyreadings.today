@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "today.dailyreadings.twa",
+        "sha256_cert_fingerprints": ["72:5F:A6:F8:39:2A:58:9D:D8:3B:20:C3:B8:7C:33:07:FC:42:4C:6A:D8:31:48:86:06:C7:16:41:97:D1:09:07"]
+      }
+    }]
