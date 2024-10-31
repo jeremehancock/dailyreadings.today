@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from '@/theme';
+import { ReactNode } from 'react'; // Import ReactNode for typing
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,11 @@ export const metadata = {
     { rel: 'shortcut-icon', url: '/icons/favicon.ico' },
   ],
 };
+
+// Define the props interface
+interface RootLayoutProps {
+  children: ReactNode; // Specify children as a ReactNode
+}
 
 // Root layout component
 export default function RootLayout({ children }: RootLayoutProps) {
