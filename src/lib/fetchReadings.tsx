@@ -26,7 +26,6 @@ export async function fetchReadings(): Promise<ReadingData> {
     // Define the callback function with the type `ReadingData`
     (window as any)[uniqueCallbackName] = (data: ReadingData) => {
       resolve(data);
-      console.log('data', data);
       // Clean up: remove the script and callback
       delete (window as any)[uniqueCallbackName];
       document.body.removeChild(script);
