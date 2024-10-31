@@ -21,5 +21,7 @@
       "purpose": "maskable"
     }
   ],
-  "splash_pages": null
+  "splash_pages": null,
+  "id": "dailyreadings.today",
+  "description": "Daily Mass Readings"
 }
