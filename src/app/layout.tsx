@@ -32,15 +32,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          color="white"
-          href="/favicon.svg"
-        />
-        <meta name="apple-mobile-web-app-title" content="Daily Readings" />
-      </head>
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
