@@ -82,7 +82,7 @@ const Readings = () => {
         <Typography mb={5} sx={{ typography: { xs: 'h3', md: 'h1' } }}>
           {formatText(data.date)}
         </Typography>
-        <Typography variant="h5" mb={5}>
+        <Typography mb={5} sx={{ typography: { xs: 'h6', md: 'h5' } }}>
           {formatText(data.day)}
         </Typography>
         <Stack
