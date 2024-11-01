@@ -40,10 +40,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <DarkModeToggle />
         </ThemeProvider>
 
-        <script type="text/javascript">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
           var sc_project=13054675; var sc_invisible=1; var
-          sc_security=&quot;f6b976e6&quot;;
-        </script>
+          sc_security="f6b976e6"&quot;";
+              `,
+          }}
+        />
         <script
           type="text/javascript"
           src="https://www.statcounter.com/counter/counter.js"
