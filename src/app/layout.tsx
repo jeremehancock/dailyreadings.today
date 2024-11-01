@@ -44,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           dangerouslySetInnerHTML={{
             __html: `
           var sc_project=13054675; var sc_invisible=1; var
-          sc_security="f6b976e6"&quot;";
+          sc_security="f6b976e6";
               `,
           }}
         />
