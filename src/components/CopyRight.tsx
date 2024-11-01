@@ -91,7 +91,6 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
                 rel="noopener noreferrer"
                 className={styles.copyrightColor}
               >
-                return (
                 <Image
                   src="https://www.netlify.com/v3/img/components/netlify-dark.svg"
                   alt="Deploys by Netlify"
