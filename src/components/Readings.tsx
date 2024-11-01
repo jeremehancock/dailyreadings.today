@@ -165,7 +165,7 @@ const Readings = () => {
           {formatText(data.Mass_G.text)}
         </Typography>
       </Stack>
-      <CopyRight open={false} title="About DailyReadings.Today">
+      <CopyRight open={false} title="About">
         <Typography mb={2}>
           {formatText(formatCopyright(data.copyright.text))}
         </Typography>
