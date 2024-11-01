@@ -9,9 +9,10 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import { Copyright, Info } from '@mui/icons-material';
+import { Info } from '@mui/icons-material';
 import { Box, Stack, Typography, Link } from '@mui/material';
 import styles from '@/components/styles/ResponseStyles.module.css';
+import Image from 'next/image';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -90,7 +91,8 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
                 rel="noopener noreferrer"
                 className={styles.copyrightColor}
               >
-                <img
+                return (
+                <Image
                   src="https://www.netlify.com/v3/img/components/netlify-dark.svg"
                   alt="Deploys by Netlify"
                 />
