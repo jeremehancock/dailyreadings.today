@@ -82,7 +82,7 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
           <Stack>
             <Stack
               textAlign="right"
-              sx={{ position: 'absolute', right: '50px', top: '8px' }}
+              sx={{ position: 'absolute', right: '65px', top: '8px' }}
             >
               <Link
                 href="https://www.netlify.com"
