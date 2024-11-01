@@ -9,7 +9,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import { Copyright } from '@mui/icons-material';
+import { Copyright, Info } from '@mui/icons-material';
 import { Box, Stack, Typography, Link } from '@mui/material';
 import styles from '@/components/styles/ResponseStyles.module.css';
 
@@ -53,7 +53,10 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
           },
         }}
       >
-        <Copyright />
+        <Box display="inline-flex" mr={0.5}>
+          <Info />
+        </Box>
+        About
       </Button>
       <BootstrapDialog
         onClose={handleClose}
@@ -77,8 +80,25 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
         </DialogTitle>
         <DialogContent dividers>
           <Stack>
+            <Stack
+              textAlign="right"
+              sx={{ position: 'absolute', right: '50px', top: '8px' }}
+            >
+              <Link
+                href="https://www.netlify.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.copyrightColor}
+              >
+                <img
+                  src="https://www.netlify.com/v3/img/components/netlify-dark.svg"
+                  alt="Deploys by Netlify"
+                />
+              </Link>
+            </Stack>
+
             <Typography fontWeight="bold" mb={2}>
-              License for dailyreadings.today app:
+              License for DailyReadings.Today app:
             </Typography>
             <Typography>MIT License</Typography>
             <Typography>Copyright (c) 2024 Jereme Hancock</Typography>
@@ -114,7 +134,7 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
               DEALINGS IN THE SOFTWARE.
             </Typography>
             <Typography fontWeight="bold" mb={2}>
-              License for the readings text:
+              License for the readings:
             </Typography>
             <Box>{children}</Box>
           </Stack>
