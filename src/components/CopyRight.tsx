@@ -83,7 +83,7 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
           <Stack>
             <Stack
               textAlign="right"
-              sx={{ position: 'absolute', right: '65px', top: '8px' }}
+              sx={{ position: 'absolute', right: '65px', top: '88px' }}
             >
               <Link
                 href="https://www.netlify.com"
@@ -92,7 +92,7 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
                 className={styles.copyrightColor}
               >
                 <Image
-                  src="https://www.netlify.com/v3/img/components/netlify-dark.svg"
+                  src="/logos/netlify-dark.svg"
                   alt="Deploys by Netlify"
                   width="114"
                   height="50"
