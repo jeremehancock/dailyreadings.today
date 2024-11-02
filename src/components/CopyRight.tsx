@@ -37,20 +37,40 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
 
   const BootstrapDialog = styled(Dialog)(() => ({
     '& .MuiDialogTitle-root': {
-      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      backgroundColor:
+        isDark && !fullScreen
+          ? 'rgb(18, 18, 18)'
+          : isDark && fullScreen
+            ? 'black'
+            : 'white',
       color: isDark ? 'white' : 'black',
     },
     '& .MuiDialogContent-root': {
-      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      backgroundColor:
+        isDark && !fullScreen
+          ? 'rgb(18, 18, 18)'
+          : isDark && fullScreen
+            ? 'black'
+            : 'white',
       color: isDark ? 'white' : 'rgb(18, 18, 18)',
       borderColor: isDark ? '#343434' : 'rgba(0, 0, 0, 0.12)',
     },
     '& .MuiDialogActions-root': {
-      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      backgroundColor:
+        isDark && !fullScreen
+          ? 'rgb(18, 18, 18)'
+          : isDark && fullScreen
+            ? 'black'
+            : 'white',
       color: isDark ? 'white' : 'rgb(18, 18, 18)',
     },
     '& .MuiPaper-root': {
-      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      backgroundColor:
+        isDark && !fullScreen
+          ? 'rgb(18, 18, 18)'
+          : isDark && fullScreen
+            ? 'black'
+            : 'white',
       color: isDark ? 'white' : 'rgb(18, 18, 18)',
     },
   }));
