@@ -7,20 +7,15 @@ import Dialog, { DialogProps } from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 import { Info } from '@mui/icons-material';
-import { Box, Stack, Typography, Link } from '@mui/material';
+import { Box, Stack, Typography, Link, useTheme } from '@mui/material';
 import styles from '@/components/styles/ResponseStyles.module.css';
 import Image from 'next/image';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
+  '& .MuiDialogContent-root': {},
+  '& .MuiDialogActions-root': {},
 }));
 
 interface CustomizedDialogsProps extends DialogProps {
@@ -40,6 +35,9 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
   const handleClose = () => {
     setOpen(false);
   };
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <>
@@ -63,27 +61,16 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        fullScreen={fullScreen}
       >
         <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-          {title} {/* Display the title prop here */}
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
-            sx={(theme) => ({
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: theme.palette.grey[500],
-            })}
-          >
-            <CloseIcon />
-          </IconButton>
+          {title}
         </DialogTitle>
         <DialogContent dividers>
           <Stack>
             <Stack
               textAlign="right"
-              sx={{ position: 'absolute', right: '65px', top: '88px' }}
+              sx={{ position: 'absolute', right: '7px', top: '8px' }}
             >
               <Link
                 href="https://www.netlify.com"
