@@ -3,6 +3,7 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from '@/theme';
 import { ReactNode } from 'react'; // Import ReactNode for typing
 import Image from 'next/image';
+import StatCounter from '@/components/StatCounter';
 
 // Define the metadata for the layout
 export const metadata = {
@@ -29,6 +30,8 @@ interface RootLayoutProps {
   children: ReactNode; // Specify children as a ReactNode
 }
 
+const sc_project = '13054675';
+
 // Root layout component
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -39,36 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <DarkModeToggle />
         </ThemeProvider>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          var sc_project=13054675; var sc_invisible=1; var
-          sc_security="f6b976e6";
-              `,
-          }}
-        />
-        <script
-          type="text/javascript"
-          src="https://www.statcounter.com/counter/counter.js"
-          async
-        ></script>
-        <noscript>
-          <div className="statcounter">
-            <a
-              title="Web Analytics"
-              href="https://statcounter.com/"
-              target="_blank"
-            >
-              <Image
-                className="statcounter"
-                src="https://c.statcounter.com/13054675/0/f6b976e6/1/"
-                alt="Web Analytics"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </a>
-          </div>
-        </noscript>
+        <StatCounter />
       </body>
     </html>
   );

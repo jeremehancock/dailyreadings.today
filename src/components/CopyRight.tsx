@@ -94,6 +94,8 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
                 <Image
                   src="https://www.netlify.com/v3/img/components/netlify-dark.svg"
                   alt="Deploys by Netlify"
+                  width="114"
+                  height="50"
                 />
               </Link>
             </Stack>
