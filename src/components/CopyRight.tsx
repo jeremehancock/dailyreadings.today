@@ -9,14 +9,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import { Info } from '@mui/icons-material';
 import { Box, Stack, Typography, Link, useTheme } from '@mui/material';
-import styles from '@/components/styles/ResponseStyles.module.css';
 import Image from 'next/image';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {},
-  '& .MuiDialogActions-root': {},
-}));
 
 interface CustomizedDialogsProps extends DialogProps {
   title: string; // Add the title prop to the props interface
@@ -38,6 +32,28 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
 
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  const isDark = localStorage.getItem('darkmode') === 'true';
+
+  const BootstrapDialog = styled(Dialog)(() => ({
+    '& .MuiDialogTitle-root': {
+      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      color: isDark ? 'white' : 'black',
+    },
+    '& .MuiDialogContent-root': {
+      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      color: isDark ? 'white' : 'rgb(18, 18, 18)',
+      borderColor: isDark ? '#343434' : 'rgba(0, 0, 0, 0.12)',
+    },
+    '& .MuiDialogActions-root': {
+      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      color: isDark ? 'white' : 'rgb(18, 18, 18)',
+    },
+    '& .MuiPaper-root': {
+      backgroundColor: isDark ? 'rgb(18, 18, 18)' : 'white',
+      color: isDark ? 'white' : 'rgb(18, 18, 18)',
+    },
+  }));
 
   return (
     <>
@@ -62,6 +78,8 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
         aria-labelledby="customized-dialog-title"
         open={open}
         fullScreen={fullScreen}
+        fullWidth
+        maxWidth="md"
       >
         <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
           {title}
@@ -76,7 +94,6 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
                 href="https://www.netlify.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.copyrightColor}
               >
                 <Image
                   src="/logos/netlify-dark.svg"
@@ -96,7 +113,6 @@ const CustomizedDialogs: React.FC<CustomizedDialogsProps> = ({
               href="https://jeremehancock.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.copyrightColor}
             >
               JeremeHancock.com
             </Link>
