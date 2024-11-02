@@ -6,15 +6,7 @@ import Readings from '@/components/Readings';
 export default function Home() {
   return (
     <Container>
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <Box my={4}>
         <Readings />
       </Box>
     </Container>

@@ -4,7 +4,6 @@ import theme from '@/theme';
 import { ReactNode } from 'react'; // Import ReactNode for typing
 import StatCounter from '@/components/StatCounter';
 
-// Define the metadata for the layout
 export const metadata = {
   title: 'Daily Mass Readings',
   description: 'Daily Mass Readings',
@@ -24,12 +23,10 @@ export const metadata = {
   ],
 };
 
-// Define the props interface
 interface RootLayoutProps {
   children: ReactNode; // Specify children as a ReactNode
 }
 
-// Root layout component
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
