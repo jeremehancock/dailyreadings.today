@@ -2,7 +2,6 @@ import DarkModeToggle from '@/components/DarkModeToggle';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from '@/theme';
 import { ReactNode } from 'react'; // Import ReactNode for typing
-import Image from 'next/image';
 import StatCounter from '@/components/StatCounter';
 
 // Define the metadata for the layout
@@ -29,8 +28,6 @@ export const metadata = {
 interface RootLayoutProps {
   children: ReactNode; // Specify children as a ReactNode
 }
-
-const sc_project = '13054675';
 
 // Root layout component
 export default function RootLayout({ children }: RootLayoutProps) {

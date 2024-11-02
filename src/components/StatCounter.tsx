@@ -1,5 +1,7 @@
 import Script from 'next/script';
 import { memo } from 'react';
+import Image from 'next/image';
+import { Link } from '@mui/material';
 
 const StatCounter = () => {
   if (process.env.NODE_ENV !== 'production') {
@@ -21,19 +23,20 @@ const StatCounter = () => {
       />
       <noscript>
         <div className="statcounter">
-          <a
+          <Link
             title="Web Analytics Made Easy - Statcounter"
             href="https://statcounter.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               className="statcounter"
               src="https://c.statcounter.com/13054675/0/f6b976e6/1/"
               alt="Web Analytics Made Easy - Statcounter"
               referrerPolicy="no-referrer-when-downgrade"
+              width="0"
             />
-          </a>
+          </Link>
         </div>
       </noscript>
     </>
