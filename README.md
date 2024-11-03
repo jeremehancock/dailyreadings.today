@@ -17,12 +17,15 @@ Minimal by design.
 ## Run DailyReadings.Today Locally
 
 ### Docker Run
-```docker pull bozodev/dailyreadings.today:latest```
 
-```docker run -d --name=dailyreadings.today -p 3333:3333 bozodev/dailyreadings.today:latest```
+`docker pull bozodev/dailyreadings.today:latest`
+
+`docker run -d --name=dailyreadings.today -p 3333:3333 --restart unless-stopped bozodev/dailyreadings.today:latest`
 
 ### Docker Compose
+
 Create docker-compose.yml:
+
 ```
 services:
   nextjs:
@@ -35,6 +38,6 @@ services:
     restart: unless-stopped
 ```
 
-```docker-compose pull```
+`docker-compose pull`
 
-```docker-compose up -d```
+`docker-compose up -d`
