@@ -37,3 +37,5 @@ yarn-error.log*
 
 # IDEs
 .idea
+
+/public/.well-known
