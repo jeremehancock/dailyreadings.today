@@ -29,44 +29,46 @@ const Readings = () => {
   }, []);
 
   const formatText = (string: string) => {
-    string = string
-      .replace(/&#160;/g, '')
-      .replace(/(style="[^"]*)\btext-indent\s*:\s*[^;]+;?\s*/gi, '$1')
-      .replace(/style="\s*"/gi, 'style=""')
-      .replace(/\s*style=""/gi, '')
-      .replace(/(style="[^"]*)\bmargin-left\s*:\s*[^;]+;?\s*/gi, '$1')
-      .replace(/style="\s*"/gi, 'style=""')
-      .replace(/\s*style=""/gi, '')
-      .replace(/(style="[^"]*)\bfont-size\s*:\s*[^;]+;?\s*/gi, '$1')
-      .replace(/style="\s*"/gi, 'style=""')
-      .replace(/(style="[^"]*)\btext-align\s*:\s*[^;]+;?\s*/gi, '$1')
-      .replace(/style="\s*"/gi, 'style=""')
-      .replace(/\s*style=""/gi, '')
-      .replace(/(style="[^"]*)\bcolor\s*:\s*[^;]+;?\s*/gi, '$1')
-      .replace(/style="\s*"/gi, 'style=""')
-      .replace(/\s*style=""/gi, '');
+    string = string;
+    // .replace(/&#160;/g, '')
+    // .replace(/(style="[^"]*)\btext-indent\s*:\s*[^;]+;?\s*/gi, '$1')
+    // .replace(/style="\s*"/gi, 'style=""')
+    // .replace(/\s*style=""/gi, '')
+    // .replace(/(style="[^"]*)\bmargin-left\s*:\s*[^;]+;?\s*/gi, '$1')
+    // .replace(/style="\s*"/gi, 'style=""')
+    // .replace(/\s*style=""/gi, '')
+    // .replace(/(style="[^"]*)\bfont-size\s*:\s*[^;]+;?\s*/gi, '$1')
+    // .replace(/style="\s*"/gi, 'style=""')
+    // .replace(/(style="[^"]*)\btext-align\s*:\s*[^;]+;?\s*/gi, '$1')
+    // .replace(/style="\s*"/gi, 'style=""')
+    // .replace(/\s*style=""/gi, '')
+    // .replace(/(style="[^"]*)\bcolor\s*:\s*[^;]+;?\s*/gi, '$1')
+    // .replace(/style="\s*"/gi, 'style=""')
+    // .replace(/\s*style=""/gi, '');
     return (
       <Box component="span" dangerouslySetInnerHTML={{ __html: string }} />
     );
   };
 
   const formatResponse = (string: string) => {
-    return string.replace(
-      /<i>/g,
-      `<div class="${styles.responseStyle} response-dark-mode"><i>`,
-    );
+    // return string.replace(
+    //   /<i>/g,
+    //   `<div class="${styles.responseStyle} response-dark-mode"><i>`,
+    // );
+    return string;
   };
 
   const formatAlleluia = (string: string) => {
-    return string
-      .replace(
-        /Alleluia, alleluia!/g,
-        `<div class="${styles.responseStyle} response-dark-mode" style="margin-bottom:0.8em;">Alleluia, alleluia!`,
-      )
-      .replace(
-        /Alleluia!/g,
-        `<div class="${styles.responseStyle} response-dark-mode" style="margin-top:0.8em;">Alleluia!`,
-      );
+    return string;
+    // .replace(
+    //   /Alleluia, alleluia!/g,
+    //   `<div class="${styles.responseStyle} response-dark-mode" style="margin-bottom:0.8em;">Alleluia, alleluia!`,
+    // )
+    // .replace(
+    //   /Alleluia!/g,
+    //   `<div class="${styles.responseStyle} response-dark-mode" style="margin-top:0.8em;">Alleluia!`,
+    // );
+    return string;
   };
 
   const formatCopyright = (string: string) => {
